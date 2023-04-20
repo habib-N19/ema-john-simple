@@ -14,21 +14,18 @@ const Header = () => {
       })
   }
   return (
-    <nav className='header-container'>
+    <nav className='header'>
       <img src={logo} alt='' />
       <div>
         <Link to='/'>Shop</Link>
         <Link to='/orders'>Orders</Link>
         <Link to='/inventory'>Inventory</Link>
         <Link to='/login'>Login</Link>
-        <Link to='/signup'>Sign Up</Link>
-        {/* <button onClick={handleLogOut}>SignOut</button> */}
+        <Link to='/signup'>Sign up</Link>
         {user && (
           <span className='text-white'>
             Welcome {user.email}
-            <button className='btn-submit' onClick={handleLogOut}>
-              SignOut
-            </button>
+            <button onClick={handleLogOut}> Log out</button>
           </span>
         )}
       </div>
